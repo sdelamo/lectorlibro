@@ -100,10 +100,10 @@
 
 /* Begin PBXFileReference section */
 		7C199DAC154C1EC300084132 /* Libros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Libros.xcdatamodel; sourceTree = "<group>"; };
-		7C199DAF154C1F8300084132 /* Libro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Libro.h; path = LectorLibro/Libro.h; sourceTree = "<group>"; };
-		7C199DB0154C1F8300084132 /* Libro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Libro.m; path = LectorLibro/Libro.m; sourceTree = "<group>"; };
-		7C199DB2154C1F8300084132 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Page.h; path = LectorLibro/Page.h; sourceTree = "<group>"; };
-		7C199DB3154C1F8300084132 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Page.m; path = LectorLibro/Page.m; sourceTree = "<group>"; };
+		7C199DAF154C1F8300084132 /* Libro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Libro.h; sourceTree = "<group>"; };
+		7C199DB0154C1F8300084132 /* Libro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Libro.m; sourceTree = "<group>"; };
+		7C199DB2154C1F8300084132 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		7C199DB3154C1F8300084132 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
 		7C199DB5154C1FF100084132 /* ADELIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADELIntroView.h; sourceTree = "<group>"; };
 		7C199DB6154C1FF100084132 /* ADELIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADELIntroView.m; sourceTree = "<group>"; };
 		7C199DB7154C1FF100084132 /* ADELIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADELIntroViewController.h; sourceTree = "<group>"; };
@@ -246,6 +246,11 @@
 		7C823113154BDFB600CFB886 /* LectorLibro */ = {
 			isa = PBXGroup;
 			children = (
+				7C199DAB154C1EC300084132 /* Libros.xcdatamodeld */,
+				7C199DB2154C1F8300084132 /* Page.h */,
+				7C199DB3154C1F8300084132 /* Page.m */,
+				7C199DAF154C1F8300084132 /* Libro.h */,
+				7C199DB0154C1F8300084132 /* Libro.m */,
 				7C199DBD154C206500084132 /* DatabaseHelper.h */,
 				7C199DBE154C206500084132 /* DatabaseHelper.m */,
 				7C199DB5154C1FF100084132 /* ADELIntroView.h */,
@@ -360,11 +365,6 @@
 				7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */,
 				7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */,
 				7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */,
-				7C199DAB154C1EC300084132 /* Libros.xcdatamodeld */,
-				7C199DB2154C1F8300084132 /* Page.h */,
-				7C199DB3154C1F8300084132 /* Page.m */,
-				7C199DAF154C1F8300084132 /* Libro.h */,
-				7C199DB0154C1F8300084132 /* Libro.m */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -743,7 +743,8 @@
 				7C199DAC154C1EC300084132 /* Libros.xcdatamodel */,
 			);
 			currentVersion = 7C199DAC154C1EC300084132 /* Libros.xcdatamodel */;
-			path = Libros.xcdatamodeld;
+			name = Libros.xcdatamodeld;
+			path = ../Libros.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

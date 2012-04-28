@@ -18,7 +18,7 @@
                             <view contentMode="scaleToFill" id="HPk-P5-fpr" customClass="AQGridView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1198"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -56,11 +56,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" id="fYz-2K-W9W">
-                                        <rect key="frame" x="374" y="439" width="20" height="20"/>
+                                        <rect key="frame" x="374" y="470" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ire-sW-iI1">
-                                        <rect key="frame" x="283" y="483" width="202" height="37"/>
+                                        <rect key="frame" x="283" y="423" width="202" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Comienza la lectura">
@@ -71,14 +71,28 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="U4U-nw-lce" kind="push" id="dXC-lx-Vbh"/>
+                                            <action selector="login:" destination="eSg-W5-dov" eventType="touchUpInside" id="SQz-1E-KMg"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de Usuario" minimumFontSize="17" id="B1K-SK-Jbn">
+                                        <rect key="frame" x="312" y="345" width="144" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" id="0ba-xu-Mzb">
+                                        <rect key="frame" x="312" y="384" width="144" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <connections>
+                                    <outlet property="password" destination="B1K-SK-Jbn" id="rFt-Ls-nXn"/>
                                     <outlet property="segueButton" destination="Ire-sW-iI1" id="MqQ-Yp-FfK"/>
                                     <outlet property="spinner" destination="fYz-2K-W9W" id="31S-EB-3oL"/>
+                                    <outlet property="username" destination="B1K-SK-Jbn" id="vt4-ns-Aex"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -87,6 +101,7 @@
                     <navigationItem key="navigationItem" id="ah8-L8-Yhb"/>
                     <connections>
                         <outlet property="introView" destination="Oyf-os-dVs" id="cbj-Lw-kdK"/>
+                        <segue destination="U4U-nw-lce" kind="push" id="L4F-Uc-mEA"/>
                     </connections>
                 </viewController>
             </objects>
@@ -115,8 +130,10 @@
         <class className="ADELIntroView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ADELIntroView.h"/>
             <relationships>
+                <relationship kind="outlet" name="password" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="segueButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="ADELIntroViewController" superclassName="UIViewController">
@@ -138,10 +155,6 @@
         <class className="ImageDemoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageDemoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="displayCellTypeMenu:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="action" name="resetOrder"/>
-                <relationship kind="action" name="shuffle"/>
-                <relationship kind="action" name="toggleLayoutDirection:" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="gridView" candidateClass="AQGridView"/>
             </relationships>
         </class>
