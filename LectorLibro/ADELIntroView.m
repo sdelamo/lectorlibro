@@ -11,6 +11,8 @@
 @implementation ADELIntroView
 @synthesize spinner = _spinner;
 @synthesize segueButton = _segueButton;
+@synthesize username = _username;
+@synthesize password = _password;
 
 - (id)initWithFrame:(CGRect)frame
 {

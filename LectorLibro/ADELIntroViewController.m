@@ -28,6 +28,9 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.introView.spinner.hidesWhenStopped = YES;
+    self.introView.segueButton.hidden = NO;
+    
     [self fetchData];
 }
 
@@ -61,6 +64,8 @@
     }];
 
     [[[self introView] spinner] stopAnimating];
+
+    //self.introView.segueButton.hidden = NO;
 }
 
 - (void)fetchData
@@ -70,7 +75,48 @@
         books =  [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         [self updateCoreDataDatabase];
     }
-
 }
+
+- (IBAction)login:(UIButton *)sender {
+    NSURL *url = [NSURL URLWithString:@"http://piccapp.es:8080/login?"];
+    /*
+    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
+    [theRequest setHTTPMethod:@"POST"];
+    NSString *msgLength = [NSString stringWithFormat:@"%d", [body length]];    
+    [theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
+
+
+    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    if( theConnection ) {
+        webData = [[NSMutableData data] retain];
+    } else {
+        NSLog(@"theConnection is NULL");
+    }
+    */    
+    //Set your NSURLRequest: Use requestWithURL:(NSURL *)theURL to initialise the request.
+    
+    //    If you need to specify a POST request and/or HTTP headers, use NSMutableURLRequest with
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPBody:@"POST"];
+    NSString *body = @"email=";
+    body = [body stringByAppendingString:self.introView.username.text];
+    body = [body stringByAppendingString:@"&passwd="];
+    body = [body stringByAppendingString:self.introView.password.text];
+    [request setHTTPBody: [@"email=" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [request 
+
+    /*
+    (void)setHTTPMethod:(NSString *)method
+    (void)setHTTPBody:(NSData *)data
+    (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field
+    Send your request in 2 ways using NSURLConnection:
+    
+Synchronously: (NSData *)sendSynchronousRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error
+    
+    This returns a NSData variable that you can process.*/
+}
+
 
 @end
