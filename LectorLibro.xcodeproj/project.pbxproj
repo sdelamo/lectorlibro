@@ -21,7 +21,55 @@
 		7C823131154BDFB600CFB886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310F154BDFB600CFB886 /* Foundation.framework */; };
 		7C823139154BDFB600CFB886 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C823137154BDFB600CFB886 /* InfoPlist.strings */; };
 		7C82313C154BDFB600CFB886 /* LectorLibroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82313B154BDFB600CFB886 /* LectorLibroTests.m */; };
-		7C823146154BDFF900CFB886 /* Season_1_Poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */; };
+		7C823169154BE18D00CFB886 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823155154BE18D00CFB886 /* AQGridView.m */; };
+		7C82316A154BE18D00CFB886 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823155154BE18D00CFB886 /* AQGridView.m */; };
+		7C82316B154BE18D00CFB886 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823158154BE18D00CFB886 /* AQGridViewCell.m */; };
+		7C82316C154BE18D00CFB886 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823158154BE18D00CFB886 /* AQGridViewCell.m */; };
+		7C82316D154BE18D00CFB886 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315A154BE18D00CFB886 /* AQGridViewController.m */; };
+		7C82316E154BE18D00CFB886 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315A154BE18D00CFB886 /* AQGridViewController.m */; };
+		7C82316F154BE18D00CFB886 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315C154BE18D00CFB886 /* AQGridViewData.m */; };
+		7C823170154BE18D00CFB886 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315C154BE18D00CFB886 /* AQGridViewData.m */; };
+		7C823171154BE18D00CFB886 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315E154BE18D00CFB886 /* AQGridViewUpdateInfo.m */; };
+		7C823172154BE18D00CFB886 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82315E154BE18D00CFB886 /* AQGridViewUpdateInfo.m */; };
+		7C823173154BE18D00CFB886 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823160154BE18D00CFB886 /* AQGridViewUpdateItem.m */; };
+		7C823174154BE18D00CFB886 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823160154BE18D00CFB886 /* AQGridViewUpdateItem.m */; };
+		7C823175154BE18D00CFB886 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823162154BE18D00CFB886 /* AQGridViewAnimatorItem.m */; };
+		7C823176154BE18D00CFB886 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823162154BE18D00CFB886 /* AQGridViewAnimatorItem.m */; };
+		7C823177154BE18D00CFB886 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823164154BE18D00CFB886 /* UIColor+AQGridView.m */; };
+		7C823178154BE18D00CFB886 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823164154BE18D00CFB886 /* UIColor+AQGridView.m */; };
+		7C823179154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823166154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m */; };
+		7C82317A154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823166154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m */; };
+		7C82317B154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823168154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		7C82317C154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823168154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		7C823185154BE1AA00CFB886 /* ImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */; };
+		7C823186154BE1AA00CFB886 /* ImageDemoGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */; };
+		7C823187154BE1AA00CFB886 /* ImageDemoFilledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823182154BE1AA00CFB886 /* ImageDemoFilledCell.m */; };
+		7C823188154BE1AA00CFB886 /* ImageDemoCellChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */; };
+		7C82318F154BE1DE00CFB886 /* AQGridSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318A154BE1DE00CFB886 /* AQGridSelection.png */; };
+		7C823190154BE1DE00CFB886 /* AQGridSelection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318A154BE1DE00CFB886 /* AQGridSelection.png */; };
+		7C823191154BE1DE00CFB886 /* AQGridSelectionGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318B154BE1DE00CFB886 /* AQGridSelectionGray.png */; };
+		7C823192154BE1DE00CFB886 /* AQGridSelectionGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318B154BE1DE00CFB886 /* AQGridSelectionGray.png */; };
+		7C823193154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318C154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png */; };
+		7C823194154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318C154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png */; };
+		7C823195154BE1DE00CFB886 /* AQGridSelectionGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318D154BE1DE00CFB886 /* AQGridSelectionGreen.png */; };
+		7C823196154BE1DE00CFB886 /* AQGridSelectionGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318D154BE1DE00CFB886 /* AQGridSelectionGreen.png */; };
+		7C823197154BE1DE00CFB886 /* AQGridSelectionRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318E154BE1DE00CFB886 /* AQGridSelectionRed.png */; };
+		7C823198154BE1DE00CFB886 /* AQGridSelectionRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C82318E154BE1DE00CFB886 /* AQGridSelectionRed.png */; };
+		7C8231AB154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A6154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png */; };
+		7C8231AC154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A6154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png */; };
+		7C8231AD154BE38C00CFB886 /* game-of-thrones-book.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A7154BE38C00CFB886 /* game-of-thrones-book.png */; };
+		7C8231AE154BE38C00CFB886 /* game-of-thrones-book.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A7154BE38C00CFB886 /* game-of-thrones-book.png */; };
+		7C8231AF154BE38C00CFB886 /* Game-of-thrones.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */; };
+		7C8231B0154BE38C00CFB886 /* Game-of-thrones.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */; };
+		7C8231B1154BE38C00CFB886 /* Season_1_Poster.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */; };
+		7C8231B2154BE38C00CFB886 /* Season_1_Poster.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */; };
+		7C8231B3154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */; };
+		7C8231B4154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */; };
+		7C8231B6154BE41E00CFB886 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8231B5154BE41E00CFB886 /* QuartzCore.framework */; };
+		7C8231B7154BE5F300CFB886 /* ImageDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */; };
+		7C8231B8154BE5F600CFB886 /* ImageDemoGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */; };
+		7C8231B9154BE5FA00CFB886 /* ImageDemoFilledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823182154BE1AA00CFB886 /* ImageDemoFilledCell.m */; };
+		7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +103,48 @@
 		7C823138154BDFB600CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C82313A154BDFB600CFB886 /* LectorLibroTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LectorLibroTests.h; sourceTree = "<group>"; };
 		7C82313B154BDFB600CFB886 /* LectorLibroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LectorLibroTests.m; sourceTree = "<group>"; };
-		7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Season_1_Poster.jpg; sourceTree = "<group>"; };
+		7C823152154BE18D00CFB886 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
+		7C823153154BE18D00CFB886 /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
+		7C823154154BE18D00CFB886 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
+		7C823155154BE18D00CFB886 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
+		7C823156154BE18D00CFB886 /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
+		7C823157154BE18D00CFB886 /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewCell.h; sourceTree = "<group>"; };
+		7C823158154BE18D00CFB886 /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewCell.m; sourceTree = "<group>"; };
+		7C823159154BE18D00CFB886 /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewController.h; sourceTree = "<group>"; };
+		7C82315A154BE18D00CFB886 /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewController.m; sourceTree = "<group>"; };
+		7C82315B154BE18D00CFB886 /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewData.h; sourceTree = "<group>"; };
+		7C82315C154BE18D00CFB886 /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewData.m; sourceTree = "<group>"; };
+		7C82315D154BE18D00CFB886 /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
+		7C82315E154BE18D00CFB886 /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
+		7C82315F154BE18D00CFB886 /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateItem.h; sourceTree = "<group>"; };
+		7C823160154BE18D00CFB886 /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateItem.m; sourceTree = "<group>"; };
+		7C823161154BE18D00CFB886 /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
+		7C823162154BE18D00CFB886 /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
+		7C823163154BE18D00CFB886 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
+		7C823164154BE18D00CFB886 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		7C823165154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
+		7C823166154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
+		7C823167154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
+		7C823168154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
+		7C82317D154BE1AA00CFB886 /* ImageDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDemoViewController.h; sourceTree = "<group>"; };
+		7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDemoViewController.m; sourceTree = "<group>"; };
+		7C82317F154BE1AA00CFB886 /* ImageDemoGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDemoGridViewCell.h; sourceTree = "<group>"; };
+		7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDemoGridViewCell.m; sourceTree = "<group>"; };
+		7C823181154BE1AA00CFB886 /* ImageDemoFilledCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDemoFilledCell.h; sourceTree = "<group>"; };
+		7C823182154BE1AA00CFB886 /* ImageDemoFilledCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDemoFilledCell.m; sourceTree = "<group>"; };
+		7C823183154BE1AA00CFB886 /* ImageDemoCellChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDemoCellChooser.h; sourceTree = "<group>"; };
+		7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDemoCellChooser.m; sourceTree = "<group>"; };
+		7C82318A154BE1DE00CFB886 /* AQGridSelection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AQGridSelection.png; sourceTree = "<group>"; };
+		7C82318B154BE1DE00CFB886 /* AQGridSelectionGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AQGridSelectionGray.png; sourceTree = "<group>"; };
+		7C82318C154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AQGridSelectionGrayBlue.png; sourceTree = "<group>"; };
+		7C82318D154BE1DE00CFB886 /* AQGridSelectionGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AQGridSelectionGreen.png; sourceTree = "<group>"; };
+		7C82318E154BE1DE00CFB886 /* AQGridSelectionRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AQGridSelectionRed.png; sourceTree = "<group>"; };
+		7C8231A6154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png"; sourceTree = "<group>"; };
+		7C8231A7154BE38C00CFB886 /* game-of-thrones-book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-of-thrones-book.png"; sourceTree = "<group>"; };
+		7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game-of-thrones.png"; sourceTree = "<group>"; };
+		7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Season_1_Poster.png; sourceTree = "<group>"; };
+		7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wpid-a_game_of_thrones_book_cover.png"; sourceTree = "<group>"; };
+		7C8231B5154BE41E00CFB886 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +152,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8231B6154BE41E00CFB886 /* QuartzCore.framework in Frameworks */,
+				7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */,
 				7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */,
 				7C823110154BDFB600CFB886 /* Foundation.framework in Frameworks */,
-				7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +175,8 @@
 		7C8230FE154BDFB600CFB886 = {
 			isa = PBXGroup;
 			children = (
-				7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */,
+				7C823199154BE1F400CFB886 /* Images */,
+				7C823189154BE1C500CFB886 /* Resources */,
 				7C823113154BDFB600CFB886 /* LectorLibro */,
 				7C823134154BDFB600CFB886 /* LectorLibroTests */,
 				7C82310C154BDFB600CFB886 /* Frameworks */,
@@ -105,6 +196,7 @@
 		7C82310C154BDFB600CFB886 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C8231B5154BE41E00CFB886 /* QuartzCore.framework */,
 				7C82310D154BDFB600CFB886 /* UIKit.framework */,
 				7C82310F154BDFB600CFB886 /* Foundation.framework */,
 				7C823111154BDFB600CFB886 /* CoreGraphics.framework */,
@@ -116,6 +208,15 @@
 		7C823113154BDFB600CFB886 /* LectorLibro */ = {
 			isa = PBXGroup;
 			children = (
+				7C82317D154BE1AA00CFB886 /* ImageDemoViewController.h */,
+				7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */,
+				7C82317F154BE1AA00CFB886 /* ImageDemoGridViewCell.h */,
+				7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */,
+				7C823181154BE1AA00CFB886 /* ImageDemoFilledCell.h */,
+				7C823182154BE1AA00CFB886 /* ImageDemoFilledCell.m */,
+				7C823183154BE1AA00CFB886 /* ImageDemoCellChooser.h */,
+				7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */,
+				7C823151154BE17800CFB886 /* GridView */,
 				7C82311C154BDFB600CFB886 /* LLAppDelegate.h */,
 				7C82311D154BDFB600CFB886 /* LLAppDelegate.m */,
 				7C82311F154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard */,
@@ -155,6 +256,60 @@
 				7C823137154BDFB600CFB886 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C823151154BE17800CFB886 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				7C823152154BE18D00CFB886 /* AQGridView+CellLayout.h */,
+				7C823153154BE18D00CFB886 /* AQGridView+CellLocationDelegation.h */,
+				7C823154154BE18D00CFB886 /* AQGridView.h */,
+				7C823155154BE18D00CFB886 /* AQGridView.m */,
+				7C823156154BE18D00CFB886 /* AQGridViewCell+AQGridViewCellPrivate.h */,
+				7C823157154BE18D00CFB886 /* AQGridViewCell.h */,
+				7C823158154BE18D00CFB886 /* AQGridViewCell.m */,
+				7C823159154BE18D00CFB886 /* AQGridViewController.h */,
+				7C82315A154BE18D00CFB886 /* AQGridViewController.m */,
+				7C82315B154BE18D00CFB886 /* AQGridViewData.h */,
+				7C82315C154BE18D00CFB886 /* AQGridViewData.m */,
+				7C82315D154BE18D00CFB886 /* AQGridViewUpdateInfo.h */,
+				7C82315E154BE18D00CFB886 /* AQGridViewUpdateInfo.m */,
+				7C82315F154BE18D00CFB886 /* AQGridViewUpdateItem.h */,
+				7C823160154BE18D00CFB886 /* AQGridViewUpdateItem.m */,
+				7C823161154BE18D00CFB886 /* AQGridViewAnimatorItem.h */,
+				7C823162154BE18D00CFB886 /* AQGridViewAnimatorItem.m */,
+				7C823163154BE18D00CFB886 /* UIColor+AQGridView.h */,
+				7C823164154BE18D00CFB886 /* UIColor+AQGridView.m */,
+				7C823165154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.h */,
+				7C823166154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m */,
+				7C823167154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.h */,
+				7C823168154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m */,
+			);
+			name = GridView;
+			sourceTree = "<group>";
+		};
+		7C823189154BE1C500CFB886 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7C82318A154BE1DE00CFB886 /* AQGridSelection.png */,
+				7C82318B154BE1DE00CFB886 /* AQGridSelectionGray.png */,
+				7C82318C154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png */,
+				7C82318D154BE1DE00CFB886 /* AQGridSelectionGreen.png */,
+				7C82318E154BE1DE00CFB886 /* AQGridSelectionRed.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7C823199154BE1F400CFB886 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7C8231A6154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png */,
+				7C8231A7154BE38C00CFB886 /* game-of-thrones-book.png */,
+				7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */,
+				7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */,
+				7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +387,16 @@
 				7C823118154BDFB600CFB886 /* InfoPlist.strings in Resources */,
 				7C823121154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard in Resources */,
 				7C823124154BDFB600CFB886 /* MainStoryboard_iPad.storyboard in Resources */,
-				7C823146154BDFF900CFB886 /* Season_1_Poster.jpg in Resources */,
+				7C82318F154BE1DE00CFB886 /* AQGridSelection.png in Resources */,
+				7C823191154BE1DE00CFB886 /* AQGridSelectionGray.png in Resources */,
+				7C823193154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png in Resources */,
+				7C823195154BE1DE00CFB886 /* AQGridSelectionGreen.png in Resources */,
+				7C823197154BE1DE00CFB886 /* AQGridSelectionRed.png in Resources */,
+				7C8231AB154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png in Resources */,
+				7C8231AD154BE38C00CFB886 /* game-of-thrones-book.png in Resources */,
+				7C8231AF154BE38C00CFB886 /* Game-of-thrones.png in Resources */,
+				7C8231B1154BE38C00CFB886 /* Season_1_Poster.png in Resources */,
+				7C8231B3154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +405,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C823139154BDFB600CFB886 /* InfoPlist.strings in Resources */,
+				7C823190154BE1DE00CFB886 /* AQGridSelection.png in Resources */,
+				7C823192154BE1DE00CFB886 /* AQGridSelectionGray.png in Resources */,
+				7C823194154BE1DE00CFB886 /* AQGridSelectionGrayBlue.png in Resources */,
+				7C823196154BE1DE00CFB886 /* AQGridSelectionGreen.png in Resources */,
+				7C823198154BE1DE00CFB886 /* AQGridSelectionRed.png in Resources */,
+				7C8231AC154BE38C00CFB886 /* a-game-of-thrones-book-1-of-a-song-of-ice-and-fire.png in Resources */,
+				7C8231AE154BE38C00CFB886 /* game-of-thrones-book.png in Resources */,
+				7C8231B0154BE38C00CFB886 /* Game-of-thrones.png in Resources */,
+				7C8231B2154BE38C00CFB886 /* Season_1_Poster.png in Resources */,
+				7C8231B4154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +444,20 @@
 				7C82311A154BDFB600CFB886 /* main.m in Sources */,
 				7C82311E154BDFB600CFB886 /* LLAppDelegate.m in Sources */,
 				7C823127154BDFB600CFB886 /* LLViewController.m in Sources */,
+				7C823169154BE18D00CFB886 /* AQGridView.m in Sources */,
+				7C82316B154BE18D00CFB886 /* AQGridViewCell.m in Sources */,
+				7C82316D154BE18D00CFB886 /* AQGridViewController.m in Sources */,
+				7C82316F154BE18D00CFB886 /* AQGridViewData.m in Sources */,
+				7C823171154BE18D00CFB886 /* AQGridViewUpdateInfo.m in Sources */,
+				7C823173154BE18D00CFB886 /* AQGridViewUpdateItem.m in Sources */,
+				7C823175154BE18D00CFB886 /* AQGridViewAnimatorItem.m in Sources */,
+				7C823177154BE18D00CFB886 /* UIColor+AQGridView.m in Sources */,
+				7C823179154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				7C82317B154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				7C8231B7154BE5F300CFB886 /* ImageDemoViewController.m in Sources */,
+				7C8231B8154BE5F600CFB886 /* ImageDemoGridViewCell.m in Sources */,
+				7C8231B9154BE5FA00CFB886 /* ImageDemoFilledCell.m in Sources */,
+				7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +466,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C82313C154BDFB600CFB886 /* LectorLibroTests.m in Sources */,
+				7C82316A154BE18D00CFB886 /* AQGridView.m in Sources */,
+				7C82316C154BE18D00CFB886 /* AQGridViewCell.m in Sources */,
+				7C82316E154BE18D00CFB886 /* AQGridViewController.m in Sources */,
+				7C823170154BE18D00CFB886 /* AQGridViewData.m in Sources */,
+				7C823172154BE18D00CFB886 /* AQGridViewUpdateInfo.m in Sources */,
+				7C823174154BE18D00CFB886 /* AQGridViewUpdateItem.m in Sources */,
+				7C823176154BE18D00CFB886 /* AQGridViewAnimatorItem.m in Sources */,
+				7C823178154BE18D00CFB886 /* UIColor+AQGridView.m in Sources */,
+				7C82317A154BE18D00CFB886 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				7C82317C154BE18D00CFB886 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				7C823185154BE1AA00CFB886 /* ImageDemoViewController.m in Sources */,
+				7C823186154BE1AA00CFB886 /* ImageDemoGridViewCell.m in Sources */,
+				7C823187154BE1AA00CFB886 /* ImageDemoFilledCell.m in Sources */,
+				7C823188154BE1AA00CFB886 /* ImageDemoCellChooser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +651,7 @@
 				7C823141154BDFB600CFB886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C823142154BDFB600CFB886 /* Build configuration list for PBXNativeTarget "LectorLibroTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +660,7 @@
 				7C823144154BDFB600CFB886 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
