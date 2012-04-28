@@ -289,18 +289,19 @@ enum
     
     //calls setViewControllers:direction:animated:completion with valid UIViewControllers
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
-    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>", @"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>", nil];
+    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>",  @"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>", nil];
     for(NSString *page in pages) {
         LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
         [webReaderViewController setHtml:page];
         [viewControllers addObject:webReaderViewController];    
     }
+    pvc.delegate = self;
+    pvc.dataSource = self;
     [pvc setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL completition){
         
     }];
     
-    pvc.delegate = self;
-    pvc.dataSource = self;
+    
     
     self.view.frame = CGRectMake(0, 0, 1024, 768);
     
@@ -330,12 +331,6 @@ enum
 }
  */
 
- 
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
-   NSLog(@"Inisde spine");
-    return 0;
-}
-
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
     NSLog(@"Inisde after");
@@ -346,4 +341,12 @@ enum
     NSLog(@"Inisde before");
     return nil;
 }
+
+- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation 
+{
+       NSLog(@"Inisde spine");
+    return  UIPageViewControllerSpineLocationMax;
+}
+
+
 @end
