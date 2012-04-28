@@ -11,6 +11,7 @@
 @interface ADELIntroView : UIView
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, weak) IBOutlet UIButton *segueButton;
+@property (nonatomic, weak) IBOutlet UIButton *loginButton;
 
 @property (nonatomic, weak) IBOutlet UITextField *username;
 @property (nonatomic, weak) IBOutlet UITextField *password;

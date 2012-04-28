@@ -64,6 +64,8 @@ enum
 {
     [super viewDidLoad];
     
+    _cellType = ImageDemoCellTypeFill;
+    
     self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 	self.gridView.autoresizesSubviews = YES;
 	self.gridView.delegate = self;
@@ -165,8 +167,6 @@ enum
     
     AQGridViewCell * cell = nil;
     
-    NSLog(@"Cell Type: %@", _cellType);
-    
     switch ( _cellType )
     {
         case ImageDemoCellTypePlain:
@@ -201,6 +201,10 @@ enum
             filledCell.image = [UIImage imageNamed: [_imageNames objectAtIndex: index]];
             filledCell.title = [[_imageNames objectAtIndex: index] stringByDeletingPathExtension];
             
+            
+            Libro *libro = [books objectAtIndex:index];
+            filledCell.image = [UIImage imageWithData:libro.thumbnail];
+            filledCell.title = libro.title;
             cell = filledCell;
             break;
         }
@@ -208,8 +212,6 @@ enum
         default:
             break;
     }
-    
-    NSLog(@"Cell");
     return ( cell );
 }
 
@@ -259,11 +261,11 @@ enum
     Libro *selectedBook = [books objectAtIndex:selectedBook];
     NSString *html = nil;    
     int i = 0;
-    //NSLog(@"Printing book pages");
-    //for(Page *page in selectedBook.pages) {    
-    //    NSLog(@"%@",page.html);
-    //    NSLog(@"%@",page.number);        
-    //}
+    NSLog(@"Printing book pages");
+    for(Page *page in selectedBook.pages) {    
+        NSLog(@"%@",page.html);
+        NSLog(@"%@",page.number);        
+    }
     if([selectedBook.pages count] < pageNumber || pageNumber < 0) {
         html = @"<html><head></head><body><h1>La página no existe</h1></body></html>";
     } else {

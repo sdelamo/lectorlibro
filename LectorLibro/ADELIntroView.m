@@ -11,6 +11,7 @@
 @implementation ADELIntroView
 @synthesize spinner = _spinner;
 @synthesize segueButton = _segueButton;
+@synthesize loginButton = _loginButton;
 @synthesize username = _username;
 @synthesize password = _password;
 

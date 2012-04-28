@@ -13,7 +13,7 @@
 #import "Page+Create.h"
 #import "ASIFormDataRequest.h"
 
-@interface ADELIntroViewController ()
+@interface ADELIntroViewController () <UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet ADELIntroView *introView;
 
@@ -29,10 +29,9 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    self.introView.password.delegate = self;
     self.introView.spinner.hidesWhenStopped = YES;
-    self.introView.segueButton.hidden = NO;
-    
-    [self fetchData];
+    self.introView.segueButton.hidden = YES;
 }
 
 - (void)updateCoreDataDatabase
@@ -65,12 +64,15 @@
     }];
 
     [[[self introView] spinner] stopAnimating];
+    self.introView.segueButton.hidden = NO;
+    self.introView.loginButton.hidden = YES;
+    self.introView.username.hidden = YES;
+    self.introView.password.hidden = YES;
+    
 
-    //self.introView.segueButton.hidden = NO;
 }
 
-- (void)fetchData
-{
+- (void)fetchData {
     NSData *data =[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://piccapp.es:8080/allBooks"]];
     if(data) {
         books =  [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
@@ -78,50 +80,33 @@
     }
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    textField.hidden = YES;
+    [self login:nil];
+    return NO;
+    
+}
+
 - (IBAction)login:(UIButton *)sender {
+    [[[self introView] spinner] startAnimating];
     NSURL *url = [NSURL URLWithString:@"http://piccapp.es:8080/login"];
     
     ASIFormDataRequest *form = [ASIFormDataRequest requestWithURL:url];
     [form addPostValue:self.introView.username.text forKey:@"email"];
     [form addPostValue:self.introView.password.text forKey:@"passwd"];
     [form setCompletionBlock:^{
-        
         NSString *res = form.responseString;
+        NSLog(@"Response String %@", res);
         if ([res isEqualToString:@"ok"]){
-            
             NSLog(@"%@", res);
             [self fetchData];
         }
     }];
     
+    
     [form startAsynchronous];
-    /*
-    NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
-    [theRequest setHTTPMethod:@"POST"];
-    NSString *msgLength = [NSString stringWithFormat:@"%d", [body length]];    
-    [theRequest addValue: msgLength forHTTPHeaderField:@"Content-Length"];
 
-
-    NSURLConnection *theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    if( theConnection ) {
-        webData = [[NSMutableData data] retain];
-    } else {
-        NSLog(@"theConnection is NULL");
-    }
-    */    
-    //Set your NSURLRequest: Use requestWithURL:(NSURL *)theURL to initialise the request.
-    
-    //    If you need to specify a POST request and/or HTTP headers, use NSMutableURLRequest with
-    
-        /*
-    (void)setHTTPMethod:(NSString *)method
-    (void)setHTTPBody:(NSData *)data
-    (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field
-    Send your request in 2 ways using NSURLConnection:
-    
-Synchronously: (NSData *)sendSynchronousRequest:(NSURLRequest *)request returningResponse:(NSURLResponse **)response error:(NSError **)error
-    
-    This returns a NSData variable that you can process.*/
 }
 
 
