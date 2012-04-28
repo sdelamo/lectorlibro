@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="HPk-P5-fpr" customClass="AQGridView">
-                                <rect key="frame" x="-136" y="427" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1242"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
