@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C199DAD154C1EC300084132 /* Libros.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DAB154C1EC300084132 /* Libros.xcdatamodeld */; };
+		7C199DB1154C1F8300084132 /* Libro.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB0154C1F8300084132 /* Libro.m */; };
+		7C199DB4154C1F8300084132 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB3154C1F8300084132 /* Page.m */; };
+		7C199DB9154C1FF100084132 /* ADELIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB6154C1FF100084132 /* ADELIntroView.m */; };
+		7C199DBA154C1FF100084132 /* ADELIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB6154C1FF100084132 /* ADELIntroView.m */; };
+		7C199DBB154C1FF100084132 /* ADELIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB8154C1FF100084132 /* ADELIntroViewController.m */; };
+		7C199DBC154C1FF100084132 /* ADELIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DB8154C1FF100084132 /* ADELIntroViewController.m */; };
+		7C199DBF154C206500084132 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DBE154C206500084132 /* DatabaseHelper.m */; };
+		7C199DC0154C206500084132 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DBE154C206500084132 /* DatabaseHelper.m */; };
+		7C199DC6154C232000084132 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C199DC5154C232000084132 /* CoreData.framework */; };
 		7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310D154BDFB600CFB886 /* UIKit.framework */; };
 		7C823110154BDFB600CFB886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310F154BDFB600CFB886 /* Foundation.framework */; };
 		7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C823111154BDFB600CFB886 /* CoreGraphics.framework */; };
@@ -72,6 +82,8 @@
 		7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */; };
 		7C8231BD154BE93100CFB886 /* LLWebReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */; };
 		7C8231BE154BE93100CFB886 /* LLWebReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */; };
+		7C8231D1154C16EB00CFB886 /* BookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231D0154C16EB00CFB886 /* BookController.m */; };
+		7C8231D2154C16EB00CFB886 /* BookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231D0154C16EB00CFB886 /* BookController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +97,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C199DAC154C1EC300084132 /* Libros.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Libros.xcdatamodel; sourceTree = "<group>"; };
+		7C199DAF154C1F8300084132 /* Libro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Libro.h; path = LectorLibro/Libro.h; sourceTree = "<group>"; };
+		7C199DB0154C1F8300084132 /* Libro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Libro.m; path = LectorLibro/Libro.m; sourceTree = "<group>"; };
+		7C199DB2154C1F8300084132 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Page.h; path = LectorLibro/Page.h; sourceTree = "<group>"; };
+		7C199DB3154C1F8300084132 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Page.m; path = LectorLibro/Page.m; sourceTree = "<group>"; };
+		7C199DB5154C1FF100084132 /* ADELIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADELIntroView.h; sourceTree = "<group>"; };
+		7C199DB6154C1FF100084132 /* ADELIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADELIntroView.m; sourceTree = "<group>"; };
+		7C199DB7154C1FF100084132 /* ADELIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADELIntroViewController.h; sourceTree = "<group>"; };
+		7C199DB8154C1FF100084132 /* ADELIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADELIntroViewController.m; sourceTree = "<group>"; };
+		7C199DBD154C206500084132 /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
+		7C199DBE154C206500084132 /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
+		7C199DC5154C232000084132 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7C823109154BDFB600CFB886 /* LectorLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectorLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C82310D154BDFB600CFB886 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C82310F154BDFB600CFB886 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +173,8 @@
 		7C8231B5154BE41E00CFB886 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7C8231BB154BE93100CFB886 /* LLWebReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLWebReaderViewController.h; path = ../LLWebReaderViewController.h; sourceTree = "<group>"; };
 		7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLWebReaderViewController.m; path = ../LLWebReaderViewController.m; sourceTree = "<group>"; };
+		7C8231CF154C16EB00CFB886 /* BookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookController.h; sourceTree = "<group>"; };
+		7C8231D0154C16EB00CFB886 /* BookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C199DC6154C232000084132 /* CoreData.framework in Frameworks */,
 				7C8231B6154BE41E00CFB886 /* QuartzCore.framework in Frameworks */,
 				7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */,
 				7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */,
@@ -179,6 +206,7 @@
 		7C8230FE154BDFB600CFB886 = {
 			isa = PBXGroup;
 			children = (
+				7C199DC5154C232000084132 /* CoreData.framework */,
 				7C823199154BE1F400CFB886 /* Images */,
 				7C823189154BE1C500CFB886 /* Resources */,
 				7C823113154BDFB600CFB886 /* LectorLibro */,
@@ -212,10 +240,18 @@
 		7C823113154BDFB600CFB886 /* LectorLibro */ = {
 			isa = PBXGroup;
 			children = (
+				7C199DBD154C206500084132 /* DatabaseHelper.h */,
+				7C199DBE154C206500084132 /* DatabaseHelper.m */,
+				7C199DB5154C1FF100084132 /* ADELIntroView.h */,
+				7C199DB6154C1FF100084132 /* ADELIntroView.m */,
+				7C199DB7154C1FF100084132 /* ADELIntroViewController.h */,
+				7C199DB8154C1FF100084132 /* ADELIntroViewController.m */,
 				7C8231BB154BE93100CFB886 /* LLWebReaderViewController.h */,
 				7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */,
 				7C82317D154BE1AA00CFB886 /* ImageDemoViewController.h */,
 				7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */,
+				7C8231CF154C16EB00CFB886 /* BookController.h */,
+				7C8231D0154C16EB00CFB886 /* BookController.m */,
 				7C82317F154BE1AA00CFB886 /* ImageDemoGridViewCell.h */,
 				7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */,
 				7C823181154BE1AA00CFB886 /* ImageDemoFilledCell.h */,
@@ -314,6 +350,11 @@
 				7C8231A8154BE38C00CFB886 /* Game-of-thrones.png */,
 				7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */,
 				7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */,
+				7C199DAB154C1EC300084132 /* Libros.xcdatamodeld */,
+				7C199DB2154C1F8300084132 /* Page.h */,
+				7C199DB3154C1F8300084132 /* Page.m */,
+				7C199DAF154C1F8300084132 /* Libro.h */,
+				7C199DB0154C1F8300084132 /* Libro.m */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -465,6 +506,13 @@
 				7C8231B9154BE5FA00CFB886 /* ImageDemoFilledCell.m in Sources */,
 				7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */,
 				7C8231BD154BE93100CFB886 /* LLWebReaderViewController.m in Sources */,
+				7C8231D1154C16EB00CFB886 /* BookController.m in Sources */,
+				7C199DAD154C1EC300084132 /* Libros.xcdatamodeld in Sources */,
+				7C199DB1154C1F8300084132 /* Libro.m in Sources */,
+				7C199DB4154C1F8300084132 /* Page.m in Sources */,
+				7C199DB9154C1FF100084132 /* ADELIntroView.m in Sources */,
+				7C199DBB154C1FF100084132 /* ADELIntroViewController.m in Sources */,
+				7C199DBF154C206500084132 /* DatabaseHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +536,10 @@
 				7C823187154BE1AA00CFB886 /* ImageDemoFilledCell.m in Sources */,
 				7C823188154BE1AA00CFB886 /* ImageDemoCellChooser.m in Sources */,
 				7C8231BE154BE93100CFB886 /* LLWebReaderViewController.m in Sources */,
+				7C8231D2154C16EB00CFB886 /* BookController.m in Sources */,
+				7C199DBA154C1FF100084132 /* ADELIntroView.m in Sources */,
+				7C199DBC154C1FF100084132 /* ADELIntroViewController.m in Sources */,
+				7C199DC0154C206500084132 /* DatabaseHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +723,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7C199DAB154C1EC300084132 /* Libros.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7C199DAC154C1EC300084132 /* Libros.xcdatamodel */,
+			);
+			currentVersion = 7C199DAC154C1EC300084132 /* Libros.xcdatamodel */;
+			path = Libros.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C823100154BDFB600CFB886 /* Project object */;
 }

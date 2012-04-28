@@ -40,6 +40,8 @@
 #import "ImageDemoGridViewCell.h"
 #import "ImageDemoFilledCell.h"
 #import "LLWebReaderViewController.h"
+#import "BookController.h"
+
 
 enum
 {
@@ -48,7 +50,7 @@ enum
     ImageDemoCellTypeOffset
 };
 
-@interface ImageDemoViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface ImageDemoViewController () <BookControllerDelegate>
 @end
 
 @implementation ImageDemoViewController
@@ -66,8 +68,10 @@ enum
     
     ImageDemoCellChooser * chooser = [[ImageDemoCellChooser alloc] initWithItemTitles: [NSArray arrayWithObjects: NSLocalizedString(@"Plain", @""), NSLocalizedString(@"Filled", @""), nil]];
     chooser.delegate = self;
-    _menuPopoverController = [[UIPopoverController alloc] initWithContentViewController: chooser];
-    
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        _menuPopoverController = [[UIPopoverController alloc] initWithContentViewController: chooser];        
+    }
+
     if ( _orderedImageNames != nil )
         return;
     
@@ -281,34 +285,15 @@ enum
 #pragma mark Grid View Delegate
 - (void) gridView: (AQGridView *) gridView didSelectItemAtIndex: (NSUInteger) index
 {
-    //LLWebReaderViewController *wvc = [[LLWebReaderViewController alloc] init];
-    //[self performSegueWithIdentifier:@"renderPageViewControlller" sender:self];
- 
-    UIPageViewController *pvc = [[UIPageViewController alloc]  initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
-                                                                navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil]; 
+    BookController *bookController = [BookController bookWithDelegate:self];
+    //bookController.view.frame = (CGRect){.size = appRect.size};
     
-    //calls setViewControllers:direction:animated:completion with valid UIViewControllers
-    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
-    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>",  @"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>", nil];
-    for(NSString *page in pages) {
-        LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
-        [webReaderViewController setHtml:page];
-        [viewControllers addObject:webReaderViewController];    
-    }
-    pvc.delegate = self;
-    pvc.dataSource = self;
-    [pvc setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL completition){
-        
-    }];
-    
-    
-    
-    self.view.frame = CGRectMake(0, 0, 1024, 768);
-    
-    pvc.view.backgroundColor = [UIColor grayColor];
-    
-
-    [self.navigationController pushViewController:pvc animated:YES];
+    // Add the child controller, and set it to the first page
+    //[self.view addSubview:bookController.view];
+    //[self addChildViewController:bookController];
+    [bookController didMoveToParentViewController:self];
+    [bookController moveToPage:0];    
+    [self.navigationController pushViewController:bookController animated:YES];
 
 }
 /*
@@ -331,21 +316,24 @@ enum
 }
  */
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
-{
-    NSLog(@"Inisde after");
-    return nil;
-}   
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSLog(@"Inisde before");
-    return nil;
+- (id) viewControllerForPage: (int) pageNumber {
+    NSLog(@"Inside view controller for page %d", pageNumber);
+    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>",@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>",
+     @"<html><head></head><body><h1>Game of Thrones 3</h1></body></html>",
+                      @"<html><head></head><body><h1>Game of Thrones 4</h1></body></html>",                      
+                   nil];
+    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
+    for(NSString *page in pages) {
+        LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
+        [webReaderViewController setHtml:page];
+        [viewControllers addObject:webReaderViewController];    
+    }
+    return [viewControllers objectAtIndex:pageNumber];
+
 }
-
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation 
-{
-       NSLog(@"Inisde spine");
-    return  UIPageViewControllerSpineLocationMax;
+- (void) bookControllerDidTurnToPage: (NSNumber *) pageNumber {
+    NSLog(@"Inside view controller for pageNumber");
 }
 
 

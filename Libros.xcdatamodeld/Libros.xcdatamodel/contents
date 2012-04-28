@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Libro" representedClassName="Libro" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Page" inverseName="book" inverseEntity="Page" syncable="YES"/>
+    </entity>
+    <entity name="Page" representedClassName="Page" syncable="YES">
+        <attribute name="html" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="book" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Libro" inverseName="pages" inverseEntity="Libro" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Libro" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Page" positionX="-101" positionY="177" width="128" height="90"/>
+    </elements>
+</model>
