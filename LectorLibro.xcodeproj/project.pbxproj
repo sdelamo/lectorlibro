@@ -70,6 +70,8 @@
 		7C8231B8154BE5F600CFB886 /* ImageDemoGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823180154BE1AA00CFB886 /* ImageDemoGridViewCell.m */; };
 		7C8231B9154BE5FA00CFB886 /* ImageDemoFilledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823182154BE1AA00CFB886 /* ImageDemoFilledCell.m */; };
 		7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823184154BE1AA00CFB886 /* ImageDemoCellChooser.m */; };
+		7C8231BD154BE93100CFB886 /* LLWebReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */; };
+		7C8231BE154BE93100CFB886 /* LLWebReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		7C8231A9154BE38C00CFB886 /* Season_1_Poster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Season_1_Poster.png; sourceTree = "<group>"; };
 		7C8231AA154BE38C00CFB886 /* wpid-a_game_of_thrones_book_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wpid-a_game_of_thrones_book_cover.png"; sourceTree = "<group>"; };
 		7C8231B5154BE41E00CFB886 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7C8231BB154BE93100CFB886 /* LLWebReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLWebReaderViewController.h; path = ../LLWebReaderViewController.h; sourceTree = "<group>"; };
+		7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLWebReaderViewController.m; path = ../LLWebReaderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 		7C823113154BDFB600CFB886 /* LectorLibro */ = {
 			isa = PBXGroup;
 			children = (
+				7C8231BB154BE93100CFB886 /* LLWebReaderViewController.h */,
+				7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */,
 				7C82317D154BE1AA00CFB886 /* ImageDemoViewController.h */,
 				7C82317E154BE1AA00CFB886 /* ImageDemoViewController.m */,
 				7C82317F154BE1AA00CFB886 /* ImageDemoGridViewCell.h */,
@@ -458,6 +464,7 @@
 				7C8231B8154BE5F600CFB886 /* ImageDemoGridViewCell.m in Sources */,
 				7C8231B9154BE5FA00CFB886 /* ImageDemoFilledCell.m in Sources */,
 				7C8231BA154BE5FD00CFB886 /* ImageDemoCellChooser.m in Sources */,
+				7C8231BD154BE93100CFB886 /* LLWebReaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +487,7 @@
 				7C823186154BE1AA00CFB886 /* ImageDemoGridViewCell.m in Sources */,
 				7C823187154BE1AA00CFB886 /* ImageDemoFilledCell.m in Sources */,
 				7C823188154BE1AA00CFB886 /* ImageDemoCellChooser.m in Sources */,
+				7C8231BE154BE93100CFB886 /* LLWebReaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

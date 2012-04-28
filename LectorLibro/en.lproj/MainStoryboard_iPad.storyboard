@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="U4U-nw-lce">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="qhc-KE-8Ba">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -12,23 +12,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIY-A9-orE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="U4U-nw-lce" customClass="ImageDemoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50m-VE-MHS">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="HPk-P5-fpr" customClass="AQGridView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1242"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1198"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="swT-8c-wCX"/>
                     <connections>
                         <outlet property="gridView" destination="HPk-P5-fpr" id="Uyi-bQ-HeK"/>
+                        <segue destination="GZV-zP-bNn" kind="push" identifier="renderPageViewControlller" id="UpG-0l-qdB"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-155" y="-687"/>
+            <point key="canvasLocation" x="-101" y="-703"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="GYk-E3-DkQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ljG-M6-YdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="GZV-zP-bNn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="og2-Z3-gpb"/>
+                </pageViewController>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-512"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SYc-iS-z2g">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew1-vy-qb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="qhc-KE-8Ba" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Lyh-yn-YCm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U4U-nw-lce" kind="relationship" relationship="rootViewController" id="vBQ-mj-8dS"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="-703"/>
         </scene>
     </scenes>
     <classes>
