@@ -39,18 +39,18 @@
 		7C8230C2154BDC7F00CFB886 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C8230C4154BDC7F00CFB886 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7C8230C6154BDC7F00CFB886 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		7C8230CA154BDC7F00CFB886 /* ClienteLectorLibro-Info.plist */ = {isa = PBXFileReference; path = "ClienteLectorLibro-Info.plist"; sourceTree = "<group>"; };
+		7C8230CA154BDC7F00CFB886 /* ClienteLectorLibro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClienteLectorLibro-Info.plist"; sourceTree = "<group>"; };
 		7C8230CC154BDC7F00CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7C8230CE154BDC7F00CFB886 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7C8230D0154BDC7F00CFB886 /* ClienteLectorLibro-Prefix.pch */ = {isa = PBXFileReference; path = "ClienteLectorLibro-Prefix.pch"; sourceTree = "<group>"; };
-		7C8230D1154BDC7F00CFB886 /* LLAppDelegate.h */ = {isa = PBXFileReference; path = LLAppDelegate.h; sourceTree = "<group>"; };
+		7C8230D0154BDC7F00CFB886 /* ClienteLectorLibro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ClienteLectorLibro-Prefix.pch"; sourceTree = "<group>"; };
+		7C8230D1154BDC7F00CFB886 /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
 		7C8230D2154BDC7F00CFB886 /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
 		7C8230D5154BDC7F00CFB886 /* ClienteLectorLibro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClienteLectorLibro.xcdatamodel; sourceTree = "<group>"; };
 		7C8230DC154BDC7F00CFB886 /* ClienteLectorLibroTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClienteLectorLibroTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8230DD154BDC7F00CFB886 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		7C8230E6154BDC7F00CFB886 /* ClienteLectorLibroTests-Info.plist */ = {isa = PBXFileReference; path = "ClienteLectorLibroTests-Info.plist"; sourceTree = "<group>"; };
+		7C8230E6154BDC7F00CFB886 /* ClienteLectorLibroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClienteLectorLibroTests-Info.plist"; sourceTree = "<group>"; };
 		7C8230E8154BDC7F00CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		7C8230EA154BDC7F00CFB886 /* ClienteLectorLibroTests.h */ = {isa = PBXFileReference; path = ClienteLectorLibroTests.h; sourceTree = "<group>"; };
+		7C8230EA154BDC7F00CFB886 /* ClienteLectorLibroTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClienteLectorLibroTests.h; sourceTree = "<group>"; };
 		7C8230EB154BDC7F00CFB886 /* ClienteLectorLibroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClienteLectorLibroTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
