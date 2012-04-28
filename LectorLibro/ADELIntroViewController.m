@@ -11,6 +11,7 @@
 #import "DatabaseHelper.h"
 #import "Libro+Create.h"
 #import "Page+Create.h"
+#import "ASIFormDataRequest.h"
 
 @interface ADELIntroViewController ()
 
@@ -78,7 +79,22 @@
 }
 
 - (IBAction)login:(UIButton *)sender {
-    NSURL *url = [NSURL URLWithString:@"http://piccapp.es:8080/login?"];
+    NSURL *url = [NSURL URLWithString:@"http://piccapp.es:8080/login"];
+    
+    ASIFormDataRequest *form = [ASIFormDataRequest requestWithURL:url];
+    [form addPostValue:self.introView.username.text forKey:@"email"];
+    [form addPostValue:self.introView.password.text forKey:@"passwd"];
+    [form setCompletionBlock:^{
+        
+        NSString *res = form.responseString;
+        if ([res isEqualToString:@"ok"]){
+            
+            NSLog(@"%@", res);
+            [self fetchData];
+        }
+    }];
+    
+    [form startAsynchronous];
     /*
     NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:url];
     [theRequest setHTTPMethod:@"POST"];
@@ -97,17 +113,7 @@
     
     //    If you need to specify a POST request and/or HTTP headers, use NSMutableURLRequest with
     
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPBody:@"POST"];
-    NSString *body = @"email=";
-    body = [body stringByAppendingString:self.introView.username.text];
-    body = [body stringByAppendingString:@"&passwd="];
-    body = [body stringByAppendingString:self.introView.password.text];
-    [request setHTTPBody: [@"email=" dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [request 
-
-    /*
+        /*
     (void)setHTTPMethod:(NSString *)method
     (void)setHTTPBody:(NSData *)data
     (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field
