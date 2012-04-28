@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310D154BDFB600CFB886 /* UIKit.framework */; };
+		7C823110154BDFB600CFB886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310F154BDFB600CFB886 /* Foundation.framework */; };
+		7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C823111154BDFB600CFB886 /* CoreGraphics.framework */; };
+		7C823118154BDFB600CFB886 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C823116154BDFB600CFB886 /* InfoPlist.strings */; };
+		7C82311A154BDFB600CFB886 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823119154BDFB600CFB886 /* main.m */; };
+		7C82311E154BDFB600CFB886 /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82311D154BDFB600CFB886 /* LLAppDelegate.m */; };
+		7C823121154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C82311F154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard */; };
+		7C823124154BDFB600CFB886 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C823122154BDFB600CFB886 /* MainStoryboard_iPad.storyboard */; };
+		7C823127154BDFB600CFB886 /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C823126154BDFB600CFB886 /* LLViewController.m */; };
+		7C82312F154BDFB600CFB886 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82312E154BDFB600CFB886 /* SenTestingKit.framework */; };
+		7C823130154BDFB600CFB886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310D154BDFB600CFB886 /* UIKit.framework */; };
+		7C823131154BDFB600CFB886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310F154BDFB600CFB886 /* Foundation.framework */; };
+		7C823139154BDFB600CFB886 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C823137154BDFB600CFB886 /* InfoPlist.strings */; };
+		7C82313C154BDFB600CFB886 /* LectorLibroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C82313B154BDFB600CFB886 /* LectorLibroTests.m */; };
+		7C823146154BDFF900CFB886 /* Season_1_Poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C823132154BDFB600CFB886 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C823100154BDFB600CFB886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C823108154BDFB600CFB886;
+			remoteInfo = LectorLibro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7C823109154BDFB600CFB886 /* LectorLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectorLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C82310D154BDFB600CFB886 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7C82310F154BDFB600CFB886 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7C823111154BDFB600CFB886 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7C823115154BDFB600CFB886 /* LectorLibro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LectorLibro-Info.plist"; sourceTree = "<group>"; };
+		7C823117154BDFB600CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C823119154BDFB600CFB886 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7C82311B154BDFB600CFB886 /* LectorLibro-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LectorLibro-Prefix.pch"; sourceTree = "<group>"; };
+		7C82311C154BDFB600CFB886 /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
+		7C82311D154BDFB600CFB886 /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
+		7C823120154BDFB600CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		7C823123154BDFB600CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		7C823125154BDFB600CFB886 /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
+		7C823126154BDFB600CFB886 /* LLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLViewController.m; sourceTree = "<group>"; };
+		7C82312D154BDFB600CFB886 /* LectorLibroTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LectorLibroTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C82312E154BDFB600CFB886 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		7C823136154BDFB600CFB886 /* LectorLibroTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LectorLibroTests-Info.plist"; sourceTree = "<group>"; };
+		7C823138154BDFB600CFB886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C82313A154BDFB600CFB886 /* LectorLibroTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LectorLibroTests.h; sourceTree = "<group>"; };
+		7C82313B154BDFB600CFB886 /* LectorLibroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LectorLibroTests.m; sourceTree = "<group>"; };
+		7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Season_1_Poster.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7C823106154BDFB600CFB886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */,
+				7C823110154BDFB600CFB886 /* Foundation.framework in Frameworks */,
+				7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C823129154BDFB600CFB886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C82312F154BDFB600CFB886 /* SenTestingKit.framework in Frameworks */,
+				7C823130154BDFB600CFB886 /* UIKit.framework in Frameworks */,
+				7C823131154BDFB600CFB886 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7C8230FE154BDFB600CFB886 = {
+			isa = PBXGroup;
+			children = (
+				7C823145154BDFF900CFB886 /* Season_1_Poster.jpg */,
+				7C823113154BDFB600CFB886 /* LectorLibro */,
+				7C823134154BDFB600CFB886 /* LectorLibroTests */,
+				7C82310C154BDFB600CFB886 /* Frameworks */,
+				7C82310A154BDFB600CFB886 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7C82310A154BDFB600CFB886 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C823109154BDFB600CFB886 /* LectorLibro.app */,
+				7C82312D154BDFB600CFB886 /* LectorLibroTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C82310C154BDFB600CFB886 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C82310D154BDFB600CFB886 /* UIKit.framework */,
+				7C82310F154BDFB600CFB886 /* Foundation.framework */,
+				7C823111154BDFB600CFB886 /* CoreGraphics.framework */,
+				7C82312E154BDFB600CFB886 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C823113154BDFB600CFB886 /* LectorLibro */ = {
+			isa = PBXGroup;
+			children = (
+				7C82311C154BDFB600CFB886 /* LLAppDelegate.h */,
+				7C82311D154BDFB600CFB886 /* LLAppDelegate.m */,
+				7C82311F154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard */,
+				7C823122154BDFB600CFB886 /* MainStoryboard_iPad.storyboard */,
+				7C823125154BDFB600CFB886 /* LLViewController.h */,
+				7C823126154BDFB600CFB886 /* LLViewController.m */,
+				7C823114154BDFB600CFB886 /* Supporting Files */,
+			);
+			path = LectorLibro;
+			sourceTree = "<group>";
+		};
+		7C823114154BDFB600CFB886 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C823115154BDFB600CFB886 /* LectorLibro-Info.plist */,
+				7C823116154BDFB600CFB886 /* InfoPlist.strings */,
+				7C823119154BDFB600CFB886 /* main.m */,
+				7C82311B154BDFB600CFB886 /* LectorLibro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C823134154BDFB600CFB886 /* LectorLibroTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C82313A154BDFB600CFB886 /* LectorLibroTests.h */,
+				7C82313B154BDFB600CFB886 /* LectorLibroTests.m */,
+				7C823135154BDFB600CFB886 /* Supporting Files */,
+			);
+			path = LectorLibroTests;
+			sourceTree = "<group>";
+		};
+		7C823135154BDFB600CFB886 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C823136154BDFB600CFB886 /* LectorLibroTests-Info.plist */,
+				7C823137154BDFB600CFB886 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7C823108154BDFB600CFB886 /* LectorLibro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C82313F154BDFB600CFB886 /* Build configuration list for PBXNativeTarget "LectorLibro" */;
+			buildPhases = (
+				7C823105154BDFB600CFB886 /* Sources */,
+				7C823106154BDFB600CFB886 /* Frameworks */,
+				7C823107154BDFB600CFB886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LectorLibro;
+			productName = LectorLibro;
+			productReference = 7C823109154BDFB600CFB886 /* LectorLibro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7C82312C154BDFB600CFB886 /* LectorLibroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C823142154BDFB600CFB886 /* Build configuration list for PBXNativeTarget "LectorLibroTests" */;
+			buildPhases = (
+				7C823128154BDFB600CFB886 /* Sources */,
+				7C823129154BDFB600CFB886 /* Frameworks */,
+				7C82312A154BDFB600CFB886 /* Resources */,
+				7C82312B154BDFB600CFB886 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C823133154BDFB600CFB886 /* PBXTargetDependency */,
+			);
+			name = LectorLibroTests;
+			productName = LectorLibroTests;
+			productReference = 7C82312D154BDFB600CFB886 /* LectorLibroTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7C823100154BDFB600CFB886 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LL;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Softamo S.L.U";
+			};
+			buildConfigurationList = 7C823103154BDFB600CFB886 /* Build configuration list for PBXProject "LectorLibro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7C8230FE154BDFB600CFB886;
+			productRefGroup = 7C82310A154BDFB600CFB886 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7C823108154BDFB600CFB886 /* LectorLibro */,
+				7C82312C154BDFB600CFB886 /* LectorLibroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C823107154BDFB600CFB886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C823118154BDFB600CFB886 /* InfoPlist.strings in Resources */,
+				7C823121154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard in Resources */,
+				7C823124154BDFB600CFB886 /* MainStoryboard_iPad.storyboard in Resources */,
+				7C823146154BDFF900CFB886 /* Season_1_Poster.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C82312A154BDFB600CFB886 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C823139154BDFB600CFB886 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7C82312B154BDFB600CFB886 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7C823105154BDFB600CFB886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C82311A154BDFB600CFB886 /* main.m in Sources */,
+				7C82311E154BDFB600CFB886 /* LLAppDelegate.m in Sources */,
+				7C823127154BDFB600CFB886 /* LLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C823128154BDFB600CFB886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C82313C154BDFB600CFB886 /* LectorLibroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C823133154BDFB600CFB886 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C823108154BDFB600CFB886 /* LectorLibro */;
+			targetProxy = 7C823132154BDFB600CFB886 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7C823116154BDFB600CFB886 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C823117154BDFB600CFB886 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7C82311F154BDFB600CFB886 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C823120154BDFB600CFB886 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		7C823122154BDFB600CFB886 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C823123154BDFB600CFB886 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7C823137154BDFB600CFB886 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C823138154BDFB600CFB886 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7C82313D154BDFB600CFB886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7C82313E154BDFB600CFB886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C823140154BDFB600CFB886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectorLibro/LectorLibro-Prefix.pch";
+				INFOPLIST_FILE = "LectorLibro/LectorLibro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7C823141154BDFB600CFB886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectorLibro/LectorLibro-Prefix.pch";
+				INFOPLIST_FILE = "LectorLibro/LectorLibro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7C823143154BDFB600CFB886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LectorLibro.app/LectorLibro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectorLibro/LectorLibro-Prefix.pch";
+				INFOPLIST_FILE = "LectorLibroTests/LectorLibroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7C823144154BDFB600CFB886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LectorLibro.app/LectorLibro";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LectorLibro/LectorLibro-Prefix.pch";
+				INFOPLIST_FILE = "LectorLibroTests/LectorLibroTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7C823103154BDFB600CFB886 /* Build configuration list for PBXProject "LectorLibro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C82313D154BDFB600CFB886 /* Debug */,
+				7C82313E154BDFB600CFB886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C82313F154BDFB600CFB886 /* Build configuration list for PBXNativeTarget "LectorLibro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C823140154BDFB600CFB886 /* Debug */,
+				7C823141154BDFB600CFB886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7C823142154BDFB600CFB886 /* Build configuration list for PBXNativeTarget "LectorLibroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C823143154BDFB600CFB886 /* Debug */,
+				7C823144154BDFB600CFB886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7C823100154BDFB600CFB886 /* Project object */;
+}
