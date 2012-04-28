@@ -17,6 +17,8 @@
 		7C199DBF154C206500084132 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DBE154C206500084132 /* DatabaseHelper.m */; };
 		7C199DC0154C206500084132 /* DatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DBE154C206500084132 /* DatabaseHelper.m */; };
 		7C199DC6154C232000084132 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C199DC5154C232000084132 /* CoreData.framework */; };
+		7C199DCE154C291B00084132 /* Libro+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DCD154C291B00084132 /* Libro+Create.m */; };
+		7C199DD1154C2B9C00084132 /* Page+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C199DD0154C2B9B00084132 /* Page+Create.m */; };
 		7C82310E154BDFB600CFB886 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310D154BDFB600CFB886 /* UIKit.framework */; };
 		7C823110154BDFB600CFB886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C82310F154BDFB600CFB886 /* Foundation.framework */; };
 		7C823112154BDFB600CFB886 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C823111154BDFB600CFB886 /* CoreGraphics.framework */; };
@@ -109,6 +111,10 @@
 		7C199DBD154C206500084132 /* DatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseHelper.h; sourceTree = "<group>"; };
 		7C199DBE154C206500084132 /* DatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseHelper.m; sourceTree = "<group>"; };
 		7C199DC5154C232000084132 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7C199DCC154C291B00084132 /* Libro+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Libro+Create.h"; sourceTree = "<group>"; };
+		7C199DCD154C291B00084132 /* Libro+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Libro+Create.m"; sourceTree = "<group>"; };
+		7C199DCF154C2B9B00084132 /* Page+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Page+Create.h"; sourceTree = "<group>"; };
+		7C199DD0154C2B9B00084132 /* Page+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Page+Create.m"; sourceTree = "<group>"; };
 		7C823109154BDFB600CFB886 /* LectorLibro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LectorLibro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C82310D154BDFB600CFB886 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7C82310F154BDFB600CFB886 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -246,6 +252,10 @@
 				7C199DB6154C1FF100084132 /* ADELIntroView.m */,
 				7C199DB7154C1FF100084132 /* ADELIntroViewController.h */,
 				7C199DB8154C1FF100084132 /* ADELIntroViewController.m */,
+				7C199DCF154C2B9B00084132 /* Page+Create.h */,
+				7C199DD0154C2B9B00084132 /* Page+Create.m */,
+				7C199DCC154C291B00084132 /* Libro+Create.h */,
+				7C199DCD154C291B00084132 /* Libro+Create.m */,
 				7C8231BB154BE93100CFB886 /* LLWebReaderViewController.h */,
 				7C8231BC154BE93100CFB886 /* LLWebReaderViewController.m */,
 				7C82317D154BE1AA00CFB886 /* ImageDemoViewController.h */,
@@ -513,6 +523,8 @@
 				7C199DB9154C1FF100084132 /* ADELIntroView.m in Sources */,
 				7C199DBB154C1FF100084132 /* ADELIntroViewController.m in Sources */,
 				7C199DBF154C206500084132 /* DatabaseHelper.m in Sources */,
+				7C199DCE154C291B00084132 /* Libro+Create.m in Sources */,
+				7C199DD1154C2B9C00084132 /* Page+Create.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

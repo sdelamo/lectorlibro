@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="eSg-W5-dov">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="0wg-8w-yG2">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
@@ -30,7 +30,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="611" y="-903"/>
+            <point key="canvasLocation" x="1033" y="-867"/>
         </scene>
         <!--Book Controller-->
         <scene sceneID="GYk-E3-DkQ">
@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" id="og2-Z3-gpb"/>
                 </pageViewController>
             </objects>
-            <point key="canvasLocation" x="1793" y="-712"/>
+            <point key="canvasLocation" x="2199" y="-867"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="IuH-lo-Qqz">
@@ -48,14 +48,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajE-Nz-v0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="eSg-W5-dov" customClass="ADELIntroViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r0i-Ha-tls">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Oyf-os-dVs" customClass="ADELIntroView">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="fYz-2K-W9W">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" id="fYz-2K-W9W">
                                         <rect key="frame" x="374" y="439" width="20" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
@@ -70,6 +70,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="U4U-nw-lce" kind="push" id="dXC-lx-Vbh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,30 +84,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ah8-L8-Yhb"/>
                     <connections>
                         <outlet property="introView" destination="Oyf-os-dVs" id="cbj-Lw-kdK"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-1199" y="-883"/>
+            <point key="canvasLocation" x="-225" y="-883"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="SYc-iS-z2g">
+        <scene sceneID="bY6-IH-ElH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ew1-vy-qb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="qhc-KE-8Ba" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyR-vO-Z7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="0wg-8w-yG2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Lyh-yn-YCm">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qjs-XF-7gG">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="U4U-nw-lce" kind="relationship" relationship="rootViewController" id="vBQ-mj-8dS"/>
+                        <segue destination="eSg-W5-dov" kind="relationship" relationship="rootViewController" id="Bgv-MC-sQX"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-275" y="-919"/>
+            <point key="canvasLocation" x="-1199" y="-883"/>
         </scene>
     </scenes>
     <classes>
