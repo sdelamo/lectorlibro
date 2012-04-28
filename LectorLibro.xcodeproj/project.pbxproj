@@ -212,7 +212,6 @@
 		7C8230FE154BDFB600CFB886 = {
 			isa = PBXGroup;
 			children = (
-				7C199DC5154C232000084132 /* CoreData.framework */,
 				7C823199154BE1F400CFB886 /* Images */,
 				7C823189154BE1C500CFB886 /* Resources */,
 				7C823113154BDFB600CFB886 /* LectorLibro */,
@@ -234,6 +233,7 @@
 		7C82310C154BDFB600CFB886 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C199DC5154C232000084132 /* CoreData.framework */,
 				7C8231B5154BE41E00CFB886 /* QuartzCore.framework */,
 				7C82310D154BDFB600CFB886 /* UIKit.framework */,
 				7C82310F154BDFB600CFB886 /* Foundation.framework */,

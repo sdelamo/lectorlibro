@@ -11,7 +11,7 @@
 
 @interface ADELIntroViewController : UIViewController <NSXMLParserDelegate>
 {
-    NSString *json;
+    NSArray *books;
 }
 
 - (void)fetchData;

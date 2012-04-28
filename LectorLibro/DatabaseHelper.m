@@ -7,6 +7,7 @@
 //
 
 #import "DatabaseHelper.h"
+#import "CoreData/CoreData.h"
 
 static NSMutableDictionary *managedDocumentDictionary = nil;
 static BOOL debug = YES;
@@ -51,6 +52,23 @@ static BOOL debug = YES;
     } else if (doc.documentState == UIDocumentStateNormal) {
         if(debug) NSLog(@"UIDocumentStateNormal");
         completionBlock(doc);
+    }
+    
+}
+
++ (void) deleteAllObjects: (NSString *) entityDescription inManagedObjectContext:(NSManagedObjectContext *)context {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *items = [context executeFetchRequest:fetchRequest error:&error];    
+    for (NSManagedObject *managedObject in items) {
+        [context deleteObject:managedObject];
+        NSLog(@"%@ object deleted",entityDescription);
+    }
+    if (![context save:&error]) {
+        NSLog(@"Error deleting %@ - error:%@",entityDescription,error);
     }
     
 }

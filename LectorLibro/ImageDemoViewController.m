@@ -35,12 +35,15 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
 #import "ImageDemoViewController.h"
 #import "ImageDemoGridViewCell.h"
 #import "ImageDemoFilledCell.h"
 #import "LLWebReaderViewController.h"
 #import "BookController.h"
+#import "DatabaseHelper.h"
+#import <CoreData/CoreData.h>
+#import "Libro.h"
+#import "Page.h"
 
 
 enum
@@ -68,10 +71,8 @@ enum
     
     ImageDemoCellChooser * chooser = [[ImageDemoCellChooser alloc] initWithItemTitles: [NSArray arrayWithObjects: NSLocalizedString(@"Plain", @""), NSLocalizedString(@"Filled", @""), nil]];
     chooser.delegate = self;
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        _menuPopoverController = [[UIPopoverController alloc] initWithContentViewController: chooser];        
-    }
-
+    _menuPopoverController = [[UIPopoverController alloc] initWithContentViewController: chooser];        
+    
     if ( _orderedImageNames != nil )
         return;
     
@@ -89,6 +90,17 @@ enum
     _orderedImageNames = [[allImageNames sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)] copy];
     _imageNames = [_orderedImageNames copy];
     
+    [DatabaseHelper openDefaultDocumentUsingBlock:^(UIManagedDocument *document) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Libro"];
+        request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
+        NSError *error;
+        NSArray *result = [document.managedObjectContext executeFetchRequest:request error:&error];
+        if(!result) {
+            [NSException raise:@"Fetched failed" format:@"Reason: %@",[error localizedDescription]];
+        }
+        NSLog(@"Libros count %d", [result count]);
+        books = [result copy];
+    }];  
     
     [self.gridView reloadData];
 }
@@ -286,6 +298,7 @@ enum
 - (void) gridView: (AQGridView *) gridView didSelectItemAtIndex: (NSUInteger) index
 {
     BookController *bookController = [BookController bookWithDelegate:self];
+    selectedBookIndex = index;
     //bookController.view.frame = (CGRect){.size = appRect.size};
     
     // Add the child controller, and set it to the first page
@@ -318,22 +331,33 @@ enum
 
 
 - (id) viewControllerForPage: (int) pageNumber {
-    NSLog(@"Inside view controller for page %d", pageNumber);
-    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>",@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>",
-     @"<html><head></head><body><h1>Game of Thrones 3</h1></body></html>",
-                      @"<html><head></head><body><h1>Game of Thrones 4</h1></body></html>",                      
-                   nil];
-    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
-    for(NSString *page in pages) {
-        LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
-        [webReaderViewController setHtml:page];
-        [viewControllers addObject:webReaderViewController];    
+    Libro *selectedBook = [books objectAtIndex:selectedBook];
+    NSString *html = nil;    
+    int i = 0;
+    //NSLog(@"Printing book pages");
+    //for(Page *page in selectedBook.pages) {    
+    //    NSLog(@"%@",page.html);
+    //    NSLog(@"%@",page.number);        
+    //}
+    if([selectedBook.pages count] < pageNumber || pageNumber < 0) {
+        html = @"<html><head></head><body><h1>La página no existe</h1></body></html>";
+    } else {
+        for(Page *page in selectedBook.pages) {
+            if(pageNumber == [page.number intValue]) {
+                html = page.html;
+                break;
+            }
+            i++;
+        }
     }
-    return [viewControllers objectAtIndex:pageNumber];
-
+    
+    LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
+    [webReaderViewController setHtml:html];
+    return webReaderViewController;
 }
+
 - (void) bookControllerDidTurnToPage: (NSNumber *) pageNumber {
-    NSLog(@"Inside view controller for pageNumber");
+    NSLog(@"Inside view controller for pageNumber %@",  pageNumber);
 }
 
 

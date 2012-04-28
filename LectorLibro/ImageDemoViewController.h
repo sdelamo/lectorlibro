@@ -44,6 +44,8 @@
 {
     NSArray * _orderedImageNames;
     NSArray * _imageNames;
+    NSArray *books;
+    NSUInteger selectedBookIndex;
     AQGridView * _gridView;
     
     NSUInteger _cellType;

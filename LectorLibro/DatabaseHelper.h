@@ -18,5 +18,6 @@ typedef void (^completion_block_t)(UIManagedDocument *managedDocument);
 
 + (void)openDocument:(NSString *)name usingBlock:(completion_block_t)completionBlock;
 
++ (void) deleteAllObjects: (NSString *) entityDescription inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end
