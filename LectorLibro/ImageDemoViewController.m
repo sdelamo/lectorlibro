@@ -100,9 +100,8 @@ enum
         }
         NSLog(@"Libros count %d", [result count]);
         books = [result copy];
+        [self.gridView reloadData];
     }];  
-    
-    [self.gridView reloadData];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -119,87 +118,6 @@ enum
      _menuPopoverController = nil;
 }
 
-
-- (IBAction) shuffle
-{
-    NSMutableArray * sourceArray = [_imageNames mutableCopy];
-    NSMutableArray * destArray = [[NSMutableArray alloc] initWithCapacity: [sourceArray count]];
-    
-    [self.gridView beginUpdates];
-    
-    srandom( time(NULL) );
-    while ( [sourceArray count] != 0 )
-    {
-        NSUInteger index = (NSUInteger)(random() % [sourceArray count]);
-        id item = [sourceArray objectAtIndex: index];
-        
-        // queue the animation
-        [self.gridView moveItemAtIndex: [_imageNames indexOfObject: item]
-                               toIndex: [destArray count]
-                         withAnimation: AQGridViewItemAnimationFade];
-        
-        // modify source & destination arrays
-        [destArray addObject: item];
-        [sourceArray removeObjectAtIndex: index];
-    }
-    
-    _imageNames = [destArray copy];
-    
-    [self.gridView endUpdates];
-    
-}
-
-- (IBAction) resetOrder
-{
-    [self.gridView beginUpdates];
-    
-    NSUInteger index, count = [_orderedImageNames count];
-    for ( index = 0; index < count; index++ )
-    {
-        NSUInteger oldIndex = [_imageNames indexOfObject: [_orderedImageNames objectAtIndex: index]];
-        if ( oldIndex == index )
-            continue;       // no changes for this item
-        
-        [self.gridView moveItemAtIndex: oldIndex toIndex: index withAnimation: AQGridViewItemAnimationFade];
-    }
-    
-    [self.gridView endUpdates];
-    
-    _imageNames = [_orderedImageNames copy];
-}
-
-- (IBAction) displayCellTypeMenu: (UIBarButtonItem *) sender
-{
-    if ( [_menuPopoverController isPopoverVisible] )
-        [_menuPopoverController dismissPopoverAnimated: YES];
-    
-    [_menuPopoverController presentPopoverFromBarButtonItem: sender
-                                   permittedArrowDirections: UIPopoverArrowDirectionUp
-                                                   animated: YES];
-}
-
-- (IBAction) toggleLayoutDirection: (UIBarButtonItem *) sender
-{
-	switch ( _gridView.layoutDirection )
-	{
-		default:
-		case AQGridViewLayoutDirectionVertical:
-			sender.title = NSLocalizedString(@"Horizontal Layout", @"");
-			_gridView.layoutDirection = AQGridViewLayoutDirectionHorizontal;
-			break;
-			
-		case AQGridViewLayoutDirectionHorizontal:
-			sender.title = NSLocalizedString(@"Vertical Layout", @"");
-			_gridView.layoutDirection = AQGridViewLayoutDirectionVertical;
-			break;
-	}
-	
-	// force the grid view to reflow
-	CGRect bounds = CGRectZero;
-	bounds.size = _gridView.frame.size;
-	_gridView.bounds = bounds;
-	[_gridView setNeedsLayout];
-}
 
 - (void) cellChooser: (ImageDemoCellChooser *) chooser selectedItemAtIndex: (NSUInteger) index
 {
@@ -235,7 +153,8 @@ enum
 
 - (NSUInteger) numberOfItemsInGridView: (AQGridView *) aGridView
 {
-    return ( [_imageNames count] );
+    //return ( [_imageNames count] );
+    return [books count];
 }
 
 - (AQGridViewCell *) gridView: (AQGridView *) aGridView cellForItemAtIndex: (NSUInteger) index
@@ -245,6 +164,8 @@ enum
     //static NSString * OffsetCellIdentifier = @"OffsetCellIdentifier";
     
     AQGridViewCell * cell = nil;
+    
+    NSLog(@"Cell Type: %@", _cellType);
     
     switch ( _cellType )
     {
@@ -259,6 +180,9 @@ enum
             }
             
             plainCell.image = [UIImage imageNamed: [_imageNames objectAtIndex: index]];
+            
+            Libro *libro = [books objectAtIndex:index];
+            plainCell.image = [UIImage imageWithData:libro.thumbnail];
             
             cell = plainCell;
             break;
@@ -285,6 +209,7 @@ enum
             break;
     }
     
+    NSLog(@"Cell");
     return ( cell );
 }
 

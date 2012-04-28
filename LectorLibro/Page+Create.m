@@ -30,7 +30,7 @@
         page = [NSEntityDescription insertNewObjectForEntityForName:@"Page" inManagedObjectContext:context];
         page.html = html;
         page.number = pageNumber;
-        page.book = [Libro libroWithTitle:nil author:nil bookIdentifier:bookId inManagedObjectContext:context];
+        page.book = [Libro libroWithTitle:nil imageUrl:nil author:nil bookIdentifier:bookId inManagedObjectContext:context];
     } else {
         page = [matches lastObject];
     }

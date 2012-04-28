@@ -46,10 +46,10 @@
                     NSString *bookIdentifier = [book objectForKey:@"_id"];
                     NSString *title = [book objectForKey:@"title"];        
                     NSString *author = [book objectForKey:@"author"];
-                    [Libro libroWithTitle:title author:author bookIdentifier:bookIdentifier inManagedObjectContext:document.managedObjectContext];
+                    NSString *imageURL = [book objectForKey:@"imageURL"];                                
+                    [Libro libroWithTitle:title imageUrl:imageURL author:author bookIdentifier:bookIdentifier inManagedObjectContext:document.managedObjectContext];
                     NSArray *pages = [book objectForKey:@"pages"];
                     for(id page in pages) {
-
                         NSString *content = [page objectForKey:@"content"];
                         NSNumber *number = [page objectForKey:@"number"];         
                         //NSLog(@"Number %@", number);
@@ -66,9 +66,11 @@
 - (void)fetchData
 {
     NSData *data =[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://piccapp.es:8080/allBooks"]];
-    books =  [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    [self updateCoreDataDatabase];
+    if(data) {
+        books =  [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        [self updateCoreDataDatabase];
+    }
+
 }
 
 @end

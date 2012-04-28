@@ -10,8 +10,7 @@
 
 @implementation Libro (Create)
 
-+ (Libro *)libroWithTitle:(NSString *)title author:(NSString *)author bookIdentifier:(NSString *)bookId
-                   inManagedObjectContext:(NSManagedObjectContext *)context
++ (Libro *)libroWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl author:(NSString *)author bookIdentifier:(NSString *)bookId inManagedObjectContext:(NSManagedObjectContext *)context
 {
     Libro *libro = nil;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Libro"];
@@ -29,6 +28,10 @@
         libro.title = title;
         libro.author = author;        
         libro.bookId = bookId;
+        if(imageUrl) {
+            libro.thumbnail = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+        }
+        
     } else {
         libro = [libros lastObject];
     }

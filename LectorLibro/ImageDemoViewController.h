@@ -54,10 +54,5 @@
 
 @property (nonatomic, retain) IBOutlet AQGridView * gridView;
 
-- (IBAction) shuffle;
-- (IBAction) resetOrder;
-- (IBAction) displayCellTypeMenu: (UIBarButtonItem *) sender;
-- (IBAction) toggleLayoutDirection: (UIBarButtonItem *) sender;
-
 @end
 

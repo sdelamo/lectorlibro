@@ -10,5 +10,5 @@
 
 @interface Libro (Create)
 
-+ (Libro *) libroWithTitle:(NSString *)title author:(NSString *)author bookIdentifier:(NSString *)bookId inManagedObjectContext:(NSManagedObjectContext *)context;
++ (Libro *)libroWithTitle:(NSString *)title imageUrl:(NSString *)imageUrl author:(NSString *)author bookIdentifier:(NSString *)bookId  inManagedObjectContext:(NSManagedObjectContext *)context;
 @end
