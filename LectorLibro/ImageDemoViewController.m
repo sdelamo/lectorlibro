@@ -39,6 +39,7 @@
 #import "ImageDemoViewController.h"
 #import "ImageDemoGridViewCell.h"
 #import "ImageDemoFilledCell.h"
+#import "LLWebReaderViewController.h"
 
 enum
 {
@@ -47,8 +48,10 @@ enum
     ImageDemoCellTypeOffset
 };
 
-@implementation ImageDemoViewController
+@interface ImageDemoViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@end
 
+@implementation ImageDemoViewController
 @synthesize gridView=_gridView;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -71,7 +74,6 @@ enum
     NSArray * paths = [NSBundle pathsForResourcesOfType: @"png" inDirectory: [[NSBundle mainBundle] bundlePath]];
     NSMutableArray * allImageNames = [[NSMutableArray alloc] init];
     
-    NSLog(@"Inside Here");
     for ( NSString * path in paths )
     {
         if ( [[path lastPathComponent] hasPrefix: @"AQ"] )
@@ -79,9 +81,6 @@ enum
         [allImageNames addObject: [path lastPathComponent]];
     }
     
-    for(NSString *name in allImageNames) {
-        NSLog(@"Name:%@",name);
-    }
     // sort alphabetically
     _orderedImageNames = [[allImageNames sortedArrayUsingSelector: @selector(caseInsensitiveCompare:)] copy];
     _imageNames = [_orderedImageNames copy];
@@ -282,9 +281,69 @@ enum
 #pragma mark Grid View Delegate
 - (void) gridView: (AQGridView *) gridView didSelectItemAtIndex: (NSUInteger) index
 {
-    //ADELImageViewController *imageVC = [[ADELImageViewController alloc] init];
-    //[self.navigationController pushViewController:imageVC animated:YES];
-    NSLog(@"Here %@", [_imageNames objectAtIndex:index]);
+    //LLWebReaderViewController *wvc = [[LLWebReaderViewController alloc] init];
+    //[self performSegueWithIdentifier:@"renderPageViewControlller" sender:self];
+ 
+    UIPageViewController *pvc = [[UIPageViewController alloc]  initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
+                                                                navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil]; 
+    
+    //calls setViewControllers:direction:animated:completion with valid UIViewControllers
+    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
+    NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>", @"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>", nil];
+    for(NSString *page in pages) {
+        LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
+        [webReaderViewController setHtml:page];
+        [viewControllers addObject:webReaderViewController];    
+    }
+    [pvc setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL completition){
+        
+    }];
+    
+    pvc.delegate = self;
+    pvc.dataSource = self;
+    
+    self.view.frame = CGRectMake(0, 0, 1024, 768);
+    
+    pvc.view.backgroundColor = [UIColor grayColor];
+    
+
+    [self.navigationController pushViewController:pvc animated:YES];
+
+}
+/*
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"renderPageViewControlller"]) {
+        if([[segue destinationViewController] isKindOfClass:[UIPageViewController class]]) {
+            UIPageViewController *pvc = [segue destinationViewController];
+            NSMutableArray *viewControllers = [[NSMutableArray alloc] init];  
+            NSArray *pages = [NSArray arrayWithObjects:@"<html><head></head><body><h1>Game of Thrones 2</h1></body></html>", @"<html><head></head><body><h1>Game of Thrones 1</h1></body></html>", nil];
+            for(NSString *page in pages) {
+                LLWebReaderViewController *webReaderViewController = [[LLWebReaderViewController alloc] init];
+                [webReaderViewController setHtml:page];
+                [viewControllers addObject:webReaderViewController];    
+            }
+            [pvc setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:^(BOOL completition){
+            }];
+        }
+    }
+}
+ */
+
+ 
+- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
+   NSLog(@"Inisde spine");
+    return 0;
 }
 
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    NSLog(@"Inisde after");
+    return nil;
+}   
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    NSLog(@"Inisde before");
+    return nil;
+}
 @end
